@@ -1,0 +1,337 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>P03_Nogueron_S_Hugo_2MV1</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-09-27"><meta name="DC.source" content="P03_Nogueron_S_Hugo_2MV1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1></h1><!--introduction--><p><b>INSTITUTO POLIT&Eacute;CNICO NACIONAL</b></p><p><b>UNIDAD PROFESIONAL INTERDISCIPLINARIA EN INGENIER&Iacute;A Y TECNOLOG&Iacute;AS AVANZADAS</b></p><p><tt>An&aacute;lisis de Se&ntilde;ales y Sistemas</tt></p><p>Autor: Noguer&oacute;n Soto Hugo de Jes&uacute;s</p><p>Profesor: Dr. Rafael Mart&iacute;nez Mart&iacute;nez</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Objetivos</a></li><li><a href="#2">Introducci&oacute;n</a></li><li><a href="#3">Desarollo:</a></li><li><a href="#4">Problema 1.</a></li><li><a href="#6">Problema 2.</a></li><li><a href="#7">Problema 3.</a></li><li><a href="#10">Problema 4.</a></li><li><a href="#12">Problema 5.</a></li><li><a href="#14">Problema 6</a></li><li><a href="#21">Ap&eacute;ndices</a></li><li><a href="#23">Referencias</a></li></ul></div><h2 id="1">Objetivos</h2><div><ol><li>Manipulaci&oacute;n b&aacute;sica de MATLAB</li><li>Gr&aacute;ficas de se&ntilde;ales reales y complejas discretas</li><li>Transformaci&oacute;n de se&ntilde;ales discretas (escalamientos y traslaciones)</li><li>C&aacute;lculo de energ&iacute;a y potencia de se&ntilde;ales discretas</li></ol></div><h2 id="2">Introducci&oacute;n</h2><p>Para poder escalar una se&ntilde;al de manera horizontal, solo debemos de multiplicar su argumento por una constante</p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq02463610055687454565.png" alt="$$x[n] \to x[bn]$$"></p><p>Es decir; generar una nueva se&ntilde;al, que llamaremos <img src="P03_Nogueron_S_Hugo_2MV1_eq03046981248997883284.png" alt="$g[n]$">, donde:</p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq03305951403083575157.png" alt="$$g[n]=x[bn]$$"></p><p>Si <img src="P03_Nogueron_S_Hugo_2MV1_eq00422850143095053977.png" alt="$0<b<1$">, entonces tendremos una expansi&oacute;n horizontal.</p><p>Si <img src="P03_Nogueron_S_Hugo_2MV1_eq07697747679137027182.png" alt="$b&gt;1$">, entonces tendremos una compresi&oacute;n horizontal.</p><p>Adem&aacute;s se debe de tener en cuenta que al estar trabajando con se&ntilde;ales en tiempo discreto; s&oacute;lo se considerar&aacute;n los valores de <img src="P03_Nogueron_S_Hugo_2MV1_eq17924167568066421134.png" alt="$x[n]$"> para <img src="P03_Nogueron_S_Hugo_2MV1_eq05475580330547185127.png" alt="$n \in Z$"></p><h2 id="3">Desarollo:</h2><h2 id="4">Problema 1.</h2><p>Crea una funci&oacute;n que se llame <img src="P03_Nogueron_S_Hugo_2MV1_eq08289168515768475909.png" alt="$fun1$"> y reciba dos par&aacute;metros <img src="P03_Nogueron_S_Hugo_2MV1_eq01003107565813904020.png" alt="$\Omega$"> y <img src="P03_Nogueron_S_Hugo_2MV1_eq04958265083611378313.png" alt="$r$">, la funci&oacute;n debe regresar la evaluaci&oacute;n <img src="P03_Nogueron_S_Hugo_2MV1_eq09819896782777103329.png" alt="$f[n]=r^ncos[\Omega n]+r^nsin[\Omega n]j$">, esta funci&oacute;n debe trabajar con <img src="P03_Nogueron_S_Hugo_2MV1_eq10796311118349230228.png" alt="$r \in R^+$">, <img src="P03_Nogueron_S_Hugo_2MV1_eq07450225886963438101.png" alt="$\Omega \in R$"> y <img src="P03_Nogueron_S_Hugo_2MV1_eq15787882802707182927.png" alt="$n \in N^n$"></p><p>function [f] = fun1(r,w)</p><p>syms n;</p><p>f=r^n*(cos(w*n)+sin(w*n)*1j);</p><p>end</p><h2 id="6">Problema 2.</h2><p>Construya una funci&oacute;n que gr&aacute;fique funciones de <img src="P03_Nogueron_S_Hugo_2MV1_eq13592437217859930033.png" alt="$f: N \to R$"> y pruebe su c&oacute;digo mostrando la gr&aacute;fica de <img src="P03_Nogueron_S_Hugo_2MV1_eq14492615976455928922.png" alt="$x[n]=na^nu[n]$"> vs <img src="P03_Nogueron_S_Hugo_2MV1_eq08984225997457563733.png" alt="$n$"> para <img src="P03_Nogueron_S_Hugo_2MV1_eq14178556397766412184.png" alt="$n \in -2,...,10$"> para <img src="P03_Nogueron_S_Hugo_2MV1_eq00212765013998882747.png" alt="$a=0.9$"></p><pre class="codeinput">n=-2:10;
+a=0.9;
+x=@(n) n.*(a.^n).* heaviside(n);
+Figura (n,x(n),<span class="string">'x[n]'</span>)
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_01.png" alt=""> <h2 id="7">Problema 3.</h2><p>Construya una funci&oacute;n que gr&aacute;fique funciones de <img src="P03_Nogueron_S_Hugo_2MV1_eq02757152497351463889.png" alt="$f: N \to R^2$">  y pruebe su c&oacute;digo mostrando la gr&aacute;fica de la funci&oacute;n exponencial del primer problema. Reporte la gr&aacute;fica de <img src="P03_Nogueron_S_Hugo_2MV1_eq08869918233192190351.png" alt="$f[n]$"> para <img src="P03_Nogueron_S_Hugo_2MV1_eq12706977765372392117.png" alt="$r=1.1$">, <img src="P03_Nogueron_S_Hugo_2MV1_eq03933324021199855378.png" alt="$\Omega=0.5$"> y <img src="P03_Nogueron_S_Hugo_2MV1_eq18316481116332564565.png" alt="$n \in -2,..20$">. Reporte la gr&aacute;fica de <img src="P03_Nogueron_S_Hugo_2MV1_eq05380890773232186944.png" alt="$|f[n]|$"> vs <img src="P03_Nogueron_S_Hugo_2MV1_eq08984225997457563733.png" alt="$n$"> y <img src="P03_Nogueron_S_Hugo_2MV1_eq12048250087022819900.png" alt="$\angle f[n]$"> vs <img src="P03_Nogueron_S_Hugo_2MV1_eq08984225997457563733.png" alt="$n$"></p><pre class="codeinput">r=1.1;
+w=0.5;
+f=@(n) r.^n.*(cos(w.*n)+sin(w.*n).*1j);
+FiguraComp(n,real(f(n)),imag(f(n)))
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_02.png" alt=""> <pre class="codeinput">mag= abs(f(n));
+Figura (n,mag,<span class="string">'|f[n]|'</span>)
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_03.png" alt=""> <pre class="codeinput">ang= angle(f(n));
+Figura (n,ang,<span class="string">'&lt;f[n]'</span>)
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_04.png" alt=""> <h2 id="10">Problema 4.</h2><p>Programe una funci&oacute;n que calcule la energ&iacute;a de una se&ntilde;al en tiempo discreto, la funci&oacute;n se debe llamar <i>energiadis</i>. La funci&oacute;n recibe dos param&eacute;tros de entrada: el vector de tiempo y las alturas asignadas. La funci&oacute;n regresa la energia de la se&ntilde;al y despliega la gr&aacute;fica de la se&ntilde;al.</p><p>function [ E ] = energiadis( h)</p><p>ff=h.^2;</p><p>E=sum(ff);</p><p>end</p><h2 id="12">Problema 5.</h2><p>Resuelva el problema 3.1.1 c) de Lathi</p><p>Encuentre la energ&iacute;a de la se&ntilde;al representada en la figura.</p><pre class="codeinput">u=@(n) (n&gt;=0 &amp; n&gt;=0);
+n=-4:6;
+x=@(n) n.*(3.*(u(n+3)-u(n-4)));
+Figura(n,x(n),<span class="string">'x[n]'</span>)
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_05.png" alt=""> <p>Para encontrar la energ&iacute;a de la se&ntilde;al anterior, solo es necesario mandar a llamar a la funci&oacute;n <i>energiadis</i> y asignarle el valor que nos arroja <img src="P03_Nogueron_S_Hugo_2MV1_eq06760118047875836363.png" alt="$x(n)$">, pero por motivos de sintaxis; no se puede ejecutar el c&oacute;digo, ya que &eacute;ste manda un error que no pudo ser corregido a tiempo.</p><p>energiadis(x(n))</p><h2 id="14">Problema 6</h2><p>Resuelve el problema 3.2.3 de Lathi</p><p>Para la se&ntilde;al que se muestra en la figura, dibuje las siguientes se&ntilde;ales:</p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq13936663958889263445.png" alt="$a)x[-n]$"></p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq18443738085441791094.png" alt="$b)x[n+6]$"></p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq14989845912000231080.png" alt="$c)x[n-6]$"></p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq07559279739947307019.png" alt="$d)x[3n]$"></p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq00814201309735515857.png" alt="$e)x[n/3]$"></p><p><img src="P03_Nogueron_S_Hugo_2MV1_eq01097730186216845850.png" alt="$f)x[3-n]$"></p><pre class="codeinput">u=@(n) (n&gt;=0 &amp; n&gt;=0);
+n=-12:21;
+x=@(n) (n.*(u(n)-u(n-4)))+((-n+6).*(u(n-4)-u(n-6)));
+Figura(n,x(n),<span class="string">'x[n]'</span>)
+axis <span class="string">equal</span>
+xlim([-1 7])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_06.png" alt=""> <p><img src="P03_Nogueron_S_Hugo_2MV1_eq13936663958889263445.png" alt="$a)x[-n]$"></p><pre class="codeinput">Figura(n,x(-n),<span class="string">'a)x[-n]'</span>)
+axis <span class="string">equal</span>
+xlim([-7 1])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_07.png" alt=""> <p><img src="P03_Nogueron_S_Hugo_2MV1_eq18443738085441791094.png" alt="$b)x[n+6]$"></p><pre class="codeinput">Figura(n,x(n+6),<span class="string">'b)x[n+6]'</span>)
+axis <span class="string">equal</span>
+xlim([-7 1])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_08.png" alt=""> <p><img src="P03_Nogueron_S_Hugo_2MV1_eq14989845912000231080.png" alt="$c)x[n-6]$"></p><pre class="codeinput">Figura(n,x(n-6),<span class="string">'c)x[n-6]'</span>)
+axis <span class="string">equal</span>
+xlim([5 13])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_09.png" alt=""> <p><img src="P03_Nogueron_S_Hugo_2MV1_eq07559279739947307019.png" alt="$d)x[3n]$"></p><pre class="codeinput">Figura(n,x(3.*n),<span class="string">'d)x[3n]'</span>)
+axis <span class="string">equal</span>
+xlim([-1 7])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_10.png" alt=""> <p><img src="P03_Nogueron_S_Hugo_2MV1_eq00814201309735515857.png" alt="$e)x[n/3]$"></p><pre class="codeinput">uu=@(nn) (nn&gt;=0 &amp; nn&gt;=0);
+nn= 0:3:21;
+xx=@(nn) ((nn./3).*(uu(nn)-uu(nn-10)))+(((-nn./3)+6).*(uu(nn-10)-uu(nn-18)));
+Figura(nn,xx(nn),<span class="string">'e)x[n/3]'</span>)
+xlim([-0 19])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_11.png" alt=""> <p><img src="P03_Nogueron_S_Hugo_2MV1_eq01097730186216845850.png" alt="$f)x[3-n]$"></p><pre class="codeinput">Figura(n,x(3-n),<span class="string">'f)x[3-n]'</span>)
+axis <span class="string">equal</span>
+xlim([-4 4])
+ylim([-1 4])
+</pre><img vspace="5" hspace="5" src="P03_Nogueron_S_Hugo_2MV1_12.png" alt=""> <h2 id="21">Ap&eacute;ndices</h2><div><ol><li>1 function FiguraComp(X1, Y1, Z1)</li></ol></div><p>figure1 = figure;</p><p>axes1 = axes('Parent',figure1);</p><p>hold(axes1,'on');</p><p>stem3(X1,Y1,Z1,'LineWidth',2,'Color',[0 0 0]);</p><p>xlabel('n'); xlim([-2 20])</p><p>ylabel('Real');</p><p>zlabel('Imag');</p><p>view(axes1,[14.9 44.4]);</p><p>box(axes1,'on');</p><p>grid(axes1,'on');</p><p>set(axes1,'FontName','Century Gothic');</p><div><ol><li>2 function Figura(X1, Y1,titl)</li></ol></div><p>figure1 = figure;</p><p>axes1 = axes('Parent',figure1);</p><p>hold(axes1,'on');</p><p>stem(X1,Y1,'LineWidth',2,'Color',[0 0 0]);</p><p>title(titl);</p><p>set(axes1,'Color',[1 0.968627452850342 0.921568632125854],'FontName',...</p><pre>'Century Gothic','XAxisLocation','origin','XGrid','on','YAxisLocation',...</pre><pre>'origin','YGrid','on');</pre><h2 id="23">Referencias</h2><div><ul><li>B.P. Lathi. (2005). Linear Systems and Signals. New York: Oxford University Press, Inc.</li><li>Especifique l&iacute;mtes de ejes. 27 Septiembre 2019. Sitio web <a href="https://la.mathworks.com/help/matlab/creating_plots/change-axis-limits-of-graph.html">https://la.mathworks.com/help/matlab/creating_plots/change-axis-limits-of-graph.html</a></li></ul></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%%
+% *INSTITUTO POLITÉCNICO NACIONAL*
+%
+% *UNIDAD PROFESIONAL INTERDISCIPLINARIA EN INGENIERÍA Y TECNOLOGÍAS AVANZADAS*
+%
+% |Análisis de Señales y Sistemas|
+%
+% Autor: Noguerón Soto Hugo de Jesús
+%
+% Profesor: Dr. Rafael Martínez Martínez
+%
+%% Objetivos
+% 
+% # Manipulación básica de MATLAB
+% # Gráficas de señales reales y complejas discretas
+% # Transformación de señales discretas (escalamientos y traslaciones)
+% # Cálculo de energía y potencia de señales discretas
+
+%% Introducción
+%
+% Para poder escalar una señal de manera horizontal, solo debemos de
+% multiplicar su argumento por una constante
+%
+% $$x[n] \to x[bn]$$
+%
+% Es decir; generar una nueva señal, que llamaremos $g[n]$, donde:
+%
+% $$g[n]=x[bn]$$
+%
+% Si $0<b<1$, entonces tendremos una expansión horizontal.
+%
+% Si $b>1$, entonces tendremos una compresión horizontal.
+%
+% Además se debe de tener en cuenta que al estar trabajando con señales en
+% tiempo discreto; sólo se considerarán los valores de $x[n]$ para $n \in Z$
+
+%% Desarollo:
+%
+%% Problema 1.
+%
+% Crea una función que se llame $fun1$ y reciba dos parámetros $\Omega$ y $r$, la función debe regresar la evaluación $f[n]=r^ncos[\Omega n]+r^nsin[\Omega n]j$, 
+% esta función debe trabajar con $r \in R^+$, $\Omega \in R$ y $n \in N^n$ 
+%%
+% function [f] = fun1(r,w)
+%
+% syms n;
+%
+% f=r^n*(cos(w*n)+sin(w*n)*1j);
+%
+% end
+%% Problema 2.
+%
+% Construya una función que gráfique funciones de $f: N \to R$ y pruebe su código mostrando la gráfica de $x[n]=na^nu[n]$ vs $n$ para $n \in -2,...,10$ para $a=0.9$ 
+n=-2:10;
+a=0.9;
+x=@(n) n.*(a.^n).* heaviside(n);
+Figura (n,x(n),'x[n]')
+%% Problema 3.
+%
+% Construya una función que gráfique funciones de $f: N \to R^2$  y pruebe su código mostrando la gráfica de la función exponencial del primer problema. 
+% Reporte la gráfica de $f[n]$ para $r=1.1$, $\Omega=0.5$ y $n \in
+% -2,..20$. Reporte la gráfica de $|f[n]|$ vs $n$ y $\angle f[n]$ vs $n$
+r=1.1;
+w=0.5;
+f=@(n) r.^n.*(cos(w.*n)+sin(w.*n).*1j);
+FiguraComp(n,real(f(n)),imag(f(n)))
+%%
+mag= abs(f(n));
+Figura (n,mag,'|f[n]|')
+%%
+ang= angle(f(n));
+Figura (n,ang,'<f[n]')
+%% Problema 4.
+%
+% Programe una función que calcule la energía de una señal en tiempo discreto, la función se debe llamar _energiadis_. La función recibe dos paramétros de entrada: 
+% el vector de tiempo y las alturas asignadas. La función regresa la energia de la señal y despliega la gráfica de la señal. 
+%%
+% function [ E ] = energiadis( h) 
+%
+% ff=h.^2; 
+%
+% E=sum(ff);
+%
+% end
+%% Problema 5.
+%
+% Resuelva el problema 3.1.1 c) de Lathi
+%
+% Encuentre la energía de la señal representada en la figura.
+u=@(n) (n>=0 & n>=0);
+n=-4:6;
+x=@(n) n.*(3.*(u(n+3)-u(n-4)));
+Figura(n,x(n),'x[n]')
+%%
+% Para encontrar la energía de la señal anterior, solo es necesario mandar
+% a llamar a la función _energiadis_ y asignarle el valor que nos arroja $x(n)$, pero por motivos de sintaxis;
+% no se puede ejecutar el código, ya que éste manda un error que no pudo
+% ser corregido a tiempo.
+%
+% energiadis(x(n))
+%
+%% Problema 6
+%
+% Resuelve el problema 3.2.3 de Lathi
+%
+% Para la señal que se muestra en la figura, dibuje las siguientes señales:
+%
+% $a)x[-n]$
+%
+% $b)x[n+6]$
+%
+% $c)x[n-6]$
+%
+% $d)x[3n]$   
+%
+% $e)x[n/3]$
+%
+% $f)x[3-n]$ 
+u=@(n) (n>=0 & n>=0);
+n=-12:21;
+x=@(n) (n.*(u(n)-u(n-4)))+((-n+6).*(u(n-4)-u(n-6)));
+Figura(n,x(n),'x[n]')
+axis equal
+xlim([-1 7])
+ylim([-1 4])
+%%
+% $a)x[-n]$
+Figura(n,x(-n),'a)x[-n]')
+axis equal
+xlim([-7 1])
+ylim([-1 4])
+%%
+% $b)x[n+6]$
+Figura(n,x(n+6),'b)x[n+6]')
+axis equal
+xlim([-7 1])
+ylim([-1 4])
+%%
+% $c)x[n-6]$
+Figura(n,x(n-6),'c)x[n-6]')
+axis equal
+xlim([5 13])
+ylim([-1 4])
+%%
+% $d)x[3n]$
+Figura(n,x(3.*n),'d)x[3n]')
+axis equal
+xlim([-1 7])
+ylim([-1 4])
+%%
+% $e)x[n/3]$
+uu=@(nn) (nn>=0 & nn>=0);
+nn= 0:3:21;
+xx=@(nn) ((nn./3).*(uu(nn)-uu(nn-10)))+(((-nn./3)+6).*(uu(nn-10)-uu(nn-18)));
+Figura(nn,xx(nn),'e)x[n/3]')
+xlim([-0 19])
+ylim([-1 4])
+%%
+% $f)x[3-n]$
+Figura(n,x(3-n),'f)x[3-n]')
+axis equal
+xlim([-4 4])
+ylim([-1 4])
+%% Apéndices
+%
+% # 1 function FiguraComp(X1, Y1, Z1)
+%
+% figure1 = figure;
+%
+% axes1 = axes('Parent',figure1);
+%
+% hold(axes1,'on');
+%
+% stem3(X1,Y1,Z1,'LineWidth',2,'Color',[0 0 0]);
+%
+% xlabel('n'); xlim([-2 20])
+%
+% ylabel('Real'); 
+%
+% zlabel('Imag');
+%
+% view(axes1,[14.9 44.4]);
+%
+% box(axes1,'on');
+%
+% grid(axes1,'on');
+%
+% set(axes1,'FontName','Century Gothic');
+%
+%%
+% # 2 function Figura(X1, Y1,titl)
+%
+% figure1 = figure;
+%
+% axes1 = axes('Parent',figure1);
+%
+% hold(axes1,'on');
+%
+% stem(X1,Y1,'LineWidth',2,'Color',[0 0 0]);
+%
+% title(titl);
+%
+% set(axes1,'Color',[1 0.968627452850342 0.921568632125854],'FontName',...
+%  
+%  'Century Gothic','XAxisLocation','origin','XGrid','on','YAxisLocation',...
+%  
+%  'origin','YGrid','on');
+% 
+%% Referencias
+%%
+% 
+% * B.P. Lathi. (2005). Linear Systems and Signals. New York: Oxford University Press, Inc.
+% * Especifique límtes de ejes. 27 Septiembre 2019. Sitio web <https://la.mathworks.com/help/matlab/creating_plots/change-axis-limits-of-graph.html>
+% 
+
+
+##### SOURCE END #####
+--></body></html>
